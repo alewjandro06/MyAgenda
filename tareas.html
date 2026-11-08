@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consulta y administra tus actividades académicas en MyAgenda.">
+  <title>MyAgenda | Mis actividades</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="tareas">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-icon" aria-hidden="true">✿</span>
+      <span>My<span class="brand-accent">Agenda</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      <a class="nav-link" href="index.html">Inicio</a>
+      <a class="nav-link" href="registro.html">Registrar actividad</a>
+      <a class="nav-link active" href="tareas.html" aria-current="page">Mis actividades</a>
+    </nav>
+  </header>
+
+  <main class="container" id="contenido">
+    <section class="page-intro page-intro-row">
+      <div>
+        <p class="eyebrow">REVISA TU PROGRESO</p>
+        <h1>Mis actividades</h1>
+        <p class="intro-text">Consulta, busca y administra tus actividades académicas.</p>
+      </div>
+      <a class="button button-primary" href="registro.html">＋ Nueva actividad</a>
+    </section>
+
+    <section class="panel activities-panel" aria-labelledby="activities-heading">
+      <div class="activities-top">
+        <div>
+          <h2 id="activities-heading">Todas mis actividades</h2>
+          <p class="muted small-text">Puedes editar, completar o eliminar cada registro.</p>
+        </div>
+        <label class="search-box" for="activity-search">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="activity-search" placeholder="Buscar una actividad..." autocomplete="off">
+        </label>
+      </div>
+
+      <div class="filter-row" role="group" aria-label="Filtrar actividades por estado">
+        <button class="filter-button active" type="button" data-filter="todas" aria-pressed="true">Todas <span id="count-all">0</span></button>
+        <button class="filter-button" type="button" data-filter="pendientes" aria-pressed="false">Pendientes <span id="count-pending">0</span></button>
+        <button class="filter-button" type="button" data-filter="completadas" aria-pressed="false">Completadas <span id="count-completed">0</span></button>
+      </div>
+
+      <div id="activities-list" class="activities-list" aria-live="polite">
+        <div class="empty-state">
+          <span aria-hidden="true">🌷</span>
+          <h3>Aún no tienes actividades</h3>
+          <p>Registra una nueva actividad para comenzar a organizarte.</p>
+          <a class="button button-primary" href="registro.html">Registrar actividad</a>
+        </div>
+      </div>
+      <p class="results-message" id="results-message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>MyAgenda</strong> · Organiza tus actividades, alcanza tus metas.</p>
+    <p class="footer-small">Proyecto desarrollado  por: Anchundia Menoscal Zamara Zulay, Bello Choez Amira Jordana, Garcia Tuarez Jose Alejandro.</p>
+  </footer>
+</body>
+</html>

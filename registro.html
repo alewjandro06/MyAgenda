@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Registra una nueva actividad académica en MyAgenda.">
+  <title>MyAgenda | Registrar actividad</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="registro">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-icon" aria-hidden="true">✿</span>
+      <span>My<span class="brand-accent">Agenda</span></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      <a class="nav-link" href="index.html">Inicio</a>
+      <a class="nav-link active" href="registro.html" aria-current="page">Registrar actividad</a>
+      <a class="nav-link" href="tareas.html">Mis actividades</a>
+    </nav>
+  </header>
+
+  <main class="container" id="contenido">
+    <section class="page-intro">
+      <p class="eyebrow">ANOTA TUS PENDIENTES</p>
+      <h1 id="form-page-title">Registrar nueva actividad</h1>
+      <p class="intro-text">Completa los datos de tu actividad para agregarla a MyAgenda.</p>
+    </section>
+
+    <div class="form-page-layout">
+      <section class="panel form-panel" aria-labelledby="activity-form-heading">
+        <div class="panel-heading">
+          <span class="heading-sticker" aria-hidden="true">✎</span>
+          <div>
+            <h2 id="activity-form-heading">Detalles de la actividad</h2>
+            <p>Los campos marcados con * son obligatorios.</p>
+          </div>
+        </div>
+
+        <form id="activity-form" novalidate>
+          <input type="hidden" id="activity-id" name="activityId">
+
+          <div class="form-field">
+            <label for="activity-title">Título de la actividad <span aria-hidden="true">*</span></label>
+            <input type="text" id="activity-title" name="title" maxlength="100" required
+              placeholder="Ej. Investigar arquitectura monolítica">
+            <small class="field-error" id="title-error"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="activity-subject">Asignatura <span aria-hidden="true">*</span></label>
+            <input type="text" id="activity-subject" name="subject" maxlength="70" required
+              placeholder="Ej. Arquitectura de Software">
+            <small class="field-error" id="subject-error"></small>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="activity-date">Fecha de entrega <span aria-hidden="true">*</span></label>
+              <input type="date" id="activity-date" name="dueDate" required>
+              <small class="field-error" id="date-error"></small>
+            </div>
+            <div class="form-field">
+              <label for="activity-priority">Prioridad</label>
+              <select id="activity-priority" name="priority">
+                <option value="Baja">Baja</option>
+                <option value="Media" selected>Media</option>
+                <option value="Alta">Alta</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="activity-description">Descripción</label>
+            <textarea id="activity-description" name="description" rows="4" maxlength="500"
+              placeholder="Describe brevemente lo que debes realizar..."></textarea>
+            <small class="helper-text">Máximo 500 caracteres.</small>
+          </div>
+
+          <div class="form-actions">
+            <button class="button button-primary" type="submit" id="save-activity-button">Registrar actividad</button>
+            <button class="button button-secondary" type="reset">Limpiar formulario</button>
+          </div>
+          <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <aside class="side-notes" aria-label="Consejos para organizarte">
+        <article class="note note-yellow">
+          <span class="note-pin" aria-hidden="true"></span>
+          <p class="note-kicker">PEQUEÑO CONSEJO</p>
+          <h3>Escribe un título claro</h3>
+          <p>Así podrás identificar rápidamente qué actividad tienes que realizar.</p>
+        </article>
+        <article class="note note-pink">
+          <span class="note-pin" aria-hidden="true"></span>
+          <p class="note-kicker">NO LO OLVIDES</p>
+          <h3>Revisa la fecha</h3>
+          <p>Registrar la fecha de entrega te ayudará a organizar tus prioridades.</p>
+        </article>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>MyAgenda</strong> · Organiza tus actividades, alcanza tus metas.</p>
+    <p class="footer-small">Proyecto desarrollado  por: Anchundia Menoscal Zamara Zulay, Bello Choez Amira Jordana, Garcia Tuarez Jose Alejandro.</p>
+  </footer>
+</body>
+</html>
