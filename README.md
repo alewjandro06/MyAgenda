@@ -1,19 +1,23 @@
-# MyAgenda
+Objetivo del proyecto:
 
-Aplicación web para registrar, consultar y administrar actividades académicas.
+Desarrollar una aplicación web sencilla, intuitiva y adaptable que permita a los estudiantes gestionar sus responsabilidades académicas, promoviendo una mejor organización y seguimiento de sus actividades.
 
-## Estructura
-- `index.html`: inicio con estadísticas y próximas actividades.
-- `registro.html`: formulario para registrar y editar actividades.
-- `tareas.html`: listado, búsqueda, filtros, completar, editar y eliminar.
-- `css/styles.css`: estilos pastel y diseño adaptable.
-- `js/app.js`: lógica compartida y almacenamiento en localStorage.
+Funcionalidades principales:
 
-## Ejecutar
-Abre `index.html` en un navegador. Se recomienda usar un servidor local sencillo para probar todas las rutas, aunque también puede funcionar abriendo los archivos directamente.
+Panel principal: visualización del resumen de actividades y estadísticas académicas.
 
-## Funcionamiento
-Los datos se guardan en `localStorage` del navegador y permanecen disponibles en ese mismo navegador. No se sincronizan entre dispositivos.
+Registro de actividades: formulario para ingresar nuevas tareas.
 
-## Antes de entregar
-Validar cada página con Nu HTML Checker, el CSS con CSS Validation Service y probar WAVE, Lighthouse, teclado, escritorio y móvil. Añadir capturas y resultados reales al informe.
+Asignaturas: asociación de actividades con diferentes materias.
+
+Fechas de entrega: establecimiento de fechas para cada actividad.
+
+Prioridades: clasificación de actividades según su nivel de importancia.
+
+Administración de tareas: consulta, edición y eliminación de actividades.
+
+Control de cumplimiento: posibilidad de marcar actividades como completadas.
+
+Búsqueda y filtros: localización de actividades según diferentes criterios.
+
+Almacenamiento local: conservación de los registros mediante localStorage.
